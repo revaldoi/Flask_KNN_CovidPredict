@@ -9,20 +9,81 @@
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  
+
 </head>
 
 <body>
  <div class="login">
-	<h1>Predict Salary Analysis</h1>
-
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Experience" required="required" />
-        <input type="text" name="test_score" placeholder="Test Score" required="required" />
-		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+		<select name="sex">
+			<option value="1">Pria</option>
+			<option value="2">Wanita</option>
+		</select>
+		<input type="text" name="age" placeholder="Umur" required="required" />
+		<select name="intubed">
+			<option value="1">Di intubasi</option>
+			<option value="2">Tidak di intubasi</option>
+		</select>
+		<select name="pneumonia">
+			<option value="1">Mengidap Pneumonia</option>
+			<option value="2">Tidak Mengidap Pneumonia</option>
+		</select>
+		<select name="pregnancy">
+			<option value="1">Hamil</option>
+			<option value="2">Tidak Hamil</option>
+		</select>
+		<select name="diabetes">
+			<option value="1">Mengidap Diabetes</option>
+			<option value="2">Tidak Mengidap Diabetes</option>
+		</select>
+		<select name="copd">
+			<option value="1">Mengidap Penyakit Paru Kronis</option>
+			<option value="2">Tidak Mengidap Penyakit Paru Kronis</option>
+		</select>
+		<select name="asthma">
+			<option value="1">Mengidap Asma</option>
+			<option value="2">Tidak Mengidap Asma</option>
+		</select>
+		<select name="hypertension">
+			<option value="1">Tekanan Darah Tinggi</option>
+			<option value="2">Tekanan Darah Normal</option>
+		</select>
+		<select name="cardiovascular">
+			<option value="1">Mengidap Penyakit Kardiovaskular</option>
+			<option value="2">Tidak Mengidap Penyakit Kardiovaskular</option>
+		</select>
+		<select name="obesity">
+			<option value="1">Obesitas</option>
+			<option value="2">Tidak Obesitas</option>
+		</select>
+		<select name="renal_chronic">
+			<option value="1">Mengidap Penyakit Ginjal Kronis</option>
+			<option value="2">Tidak Mengidap Penyakit Ginjal Kronis</option>
+		</select>
+		<select name="tobacco">
+			<option value="1">Perokok AKtif</option>
+			<option value="2">Bukan Perokok Aktif</option>
+		</select>
+		<select name="contact_other_covid">
+			<option value="1">Berhubungan dengan pasien covid</option>
+			<option value="2">Tidak berhubungan dengan pasien covid</option>
+		</select>
+		<!-- 
+		  <input type="text" name="intubed" placeholder="intubed" required="required" />
+		  <input type="text" name="pneumonia" placeholder="pneumonia" required="required" />
+		  <input type="text" name="pregnancy" placeholder="pregnancy" required="required" />
+		  <input type="text" name="diabetes" placeholder="diabetes" required="required" />
+		  <input type="text" name="copd" placeholder="copd" required="required" />
+		  <input type="text" name="asthma" placeholder="asthma" required="required" />
+		  <input type="text" name="hypertension" placeholder="hypertension" required="required" />
+		  <input type="text" name="cardiovascular" placeholder="cardiovascular" required="required" />
+		  <input type="text" name="obesity" placeholder="obesity" required="required" />
+		  <input type="text" name="renal_chronic" placeholder="renal_chronic" required="required" />
+		  <input type="text" name="tobacco" placeholder="tobacco" required="required" />
+		  <input type="text" name="contact_other_covid" placeholder="contact_other_covid" required="required" />
+		-->
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
    <br>
